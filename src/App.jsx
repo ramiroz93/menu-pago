@@ -122,7 +122,7 @@ export default function App() {
   if (loading) return <LoadingScreen />
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/menu-pago">
       <Suspense fallback={<LoadingScreen />}>
       <Routes>
         {/* Public */}
