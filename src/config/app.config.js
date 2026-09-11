@@ -4,12 +4,12 @@ export const APP_CONFIG = {
   discount: 0.15,             // 15% descuento sobre todos los platos
   minConsumptionBalance: 50,  // Saldo mínimo para que el restaurante esté abierto
   topUpBonus: 0.05,           // 5% bonus sobre recarga
-  whatsappNumber: '59167381264',
+  whatsappNumber: '00000000000', // reemplaza con tu número de WhatsApp
 
-  // QR de pago — reemplazar src con la imagen real del QR
+  // QR de pago — reemplaza con los datos y la imagen de tu propia cuenta bancaria
   paymentQR: {
-    label: 'BNB — Zubieta Choque Ramiro Fabian',
-    number: '67381264',
+    label: 'Tu Banco — Nombre del titular',
+    number: '00000000',
     imageUrl: '/qr-pago.png',
   },
 
