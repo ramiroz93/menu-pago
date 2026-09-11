@@ -1,0 +1,12 @@
+﻿[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.menupago.app",
+      "sha256_cert_fingerprints": [
+        "BE:D9:08:07:0C:6A:EF:B8:85:98:19:2E:C8:6B:F5:16:91:78:D2:C3:3D:0F:68:D8:C4:9B:32:C3:9B:F0:C4:AF"
+      ]
+    }
+  }
+]
