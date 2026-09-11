@@ -1,5 +1,7 @@
 # Menu-Pago
 
+**🔗 Demo en vivo:** https://ramiroz93.github.io/menu-pago/ (interfaz visible, sin conexión a una base de datos real — ver nota abajo)
+
 PWA de pedidos con saldo prepagado: los usuarios cargan saldo, descubren restaurantes cercanos, piden desde el menú y pagan al instante con descuento — sin manejar efectivo ni esperar validación de pago en el momento del pedido.
 
 Tres roles con su propia interfaz: **usuario**, **restaurante** y **administrador**, todos sobre la misma base de código.
