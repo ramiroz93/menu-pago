@@ -1,10 +1,16 @@
 # Menu-Pago
 
-**🔗 Demo en vivo:** https://ramiroz93.github.io/menu-pago/ (interfaz visible, sin conexión a una base de datos real — ver nota abajo)
+**🔗 Demo en vivo:** https://ramiroz93.github.io/menu-pago/ — 100% funcional, sin necesidad de crear cuenta: elige con qué rol entrar (Cliente / Restaurante / Admin) y prueba el flujo completo con datos ficticios.
 
 PWA de pedidos con saldo prepagado: los usuarios cargan saldo, descubren restaurantes cercanos, piden desde el menú y pagan al instante con descuento — sin manejar efectivo ni esperar validación de pago en el momento del pedido.
 
 Tres roles con su propia interfaz: **usuario**, **restaurante** y **administrador**, todos sobre la misma base de código.
+
+## Sobre la demo en vivo
+
+La demo publicada corre 100% en el navegador, sin backend real: `src/config/supabase.js` reemplaza al cliente real de Supabase por una versión en memoria con la misma interfaz (`.from()`, `.rpc()`, `.auth`, `.storage`) pero datos ficticios — así se puede navegar, pedir, aprobar recargas y gestionar restaurantes sin exponer ninguna base de datos real. Los cambios que hagas viven solo en tu pestaña y se pierden al recargar.
+
+Este repo (la versión de portfolio) queda configurado para esta demo en memoria. El sistema original —conectado a un Supabase real con `supabase-js`, autenticación por email y Edge Functions— sigue el mismo esquema de tablas documentado en [`SUPABASE_SETUP.sql`](SUPABASE_SETUP.sql) por si quieres ver cómo se integra con un backend real.
 
 ## Qué resuelve
 
@@ -32,20 +38,12 @@ Tres roles con su propia interfaz: **usuario**, **restaurante** y **administrado
 
 ```bash
 npm install
-```
-
-1. Crea un proyecto en [Supabase](https://supabase.com) y corre `SUPABASE_SETUP.sql` en el SQL Editor para crear las tablas
-2. Copia `.env.example` a `.env` y completa con las credenciales de tu proyecto (Settings → API) y una clave pública VAPID para las notificaciones push
-3. En Supabase, activa **Authentication → Email** (y desactiva "Confirm email" para desarrollo)
-4. Despliega las Edge Functions de `supabase/functions/` con el [CLI de Supabase](https://supabase.com/docs/guides/cli)
-
-```bash
 npm run dev
 ```
 
-Guía completa paso a paso en [`SETUP.md`](SETUP.md).
+Y ya — corre igual que la demo en vivo, con datos ficticios y sin necesidad de configurar nada. `.env.example` y [`SETUP.md`](SETUP.md) documentan cómo sería conectarlo a un Supabase real (crear el proyecto, correr `SUPABASE_SETUP.sql`, activar Auth por email, desplegar las Edge Functions) para quien quiera adaptar el código a un backend propio.
 
-> Este repo es una pieza de portfolio: las credenciales originales fueron removidas y reemplazadas por placeholders. El build de producción (`dist/`) no se incluye porque Vite incrusta las variables de entorno en el bundle compilado — se genera con `npm run build` una vez configurado tu propio `.env`.
+> Este repo es una pieza de portfolio: las credenciales originales fueron removidas. El build de producción (`dist/`) no se incluye en el repo — se genera con `npm run build`.
 
 ## Estructura
 
