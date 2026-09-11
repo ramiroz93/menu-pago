@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#FF6B35" />
+    <meta name="description" content="Menu-Pago — Descubre restaurantes y paga con saldo" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Menu-Pago" />
+    <link rel="manifest" href="/menu-pago/manifest.json" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/menu-pago/icons/pwa-64x64.png" />
+    <link rel="apple-touch-icon" href="/menu-pago/icons/apple-touch-icon-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>Menu-Pago</title>
+    <script>
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window.__deferredInstallPrompt = e;
+      });
+    </script>
+    <script type="module" crossorigin src="/menu-pago/assets/index-DS1eKvmb.js"></script>
+    <link rel="stylesheet" crossorigin href="/menu-pago/assets/index-kc-kY8Tk.css">
+  <script id="vite-plugin-pwa:register-sw" src="/menu-pago/registerSW.js"></script></head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+  </body>
+</html>
